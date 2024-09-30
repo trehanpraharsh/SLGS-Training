@@ -1,0 +1,7 @@
+package mavenapp.com.mavenapp;
+
+public interface IDatabase {
+	
+	public void updateStudentScore(String sid, int total);
+
+}

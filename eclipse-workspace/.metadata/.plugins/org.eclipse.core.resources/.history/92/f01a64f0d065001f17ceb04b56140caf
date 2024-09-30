@@ -1,0 +1,17 @@
+package com.advice;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggerApp {
+	
+	
+	@Before("execution (* com.model.WelcomeDAO.sayHello(..))")
+	public void callBefore() {
+		System.out.println("Called before jointpoint...");
+	}
+
+}

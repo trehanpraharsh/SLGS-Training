@@ -1,0 +1,9 @@
+package com.model;
+
+public class BankAccount {
+	
+	private int empID;
+	private String empName;
+	private String orgName;
+
+}

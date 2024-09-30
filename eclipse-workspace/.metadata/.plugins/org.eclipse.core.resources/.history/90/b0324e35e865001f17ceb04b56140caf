@@ -1,0 +1,32 @@
+package com.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.model.Employee;
+
+import jakarta.annotation.PostConstruct;
+
+public class EmployeeDAOImpl extends JdbcDaoSupport implements EmployeeDAO {
+
+	@Autowired
+	//DataSource is used to 
+	private DataSource dataSource;
+	
+	@PostConstruct
+	private void init() {
+		setDataSource(dataSource);
+	}
+	
+	@Override
+	public Employee saveEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+	
+	
+
+}

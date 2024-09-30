@@ -1,0 +1,12 @@
+package com.model;
+
+public class IndianRestro implements Restaurant {
+
+	@Override
+	public void prepareDish(String dish) {
+		// TODO Auto-generated method stub
+		System.out.println("Preparing " + dish + " with spices and love");
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.calc;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+
+public class CalcTest2 {
+	
+	@Mock
+	AddService addService;
+	
+	public void init() {
+		MockitoAnnotations.initMocks(this);
+		
+	}
+	
+
+	@org.junit.jupiter.api.Test
+	void testCalc() {
+		
+		CalcService calcService;
+		
+		calcService = new CalcService(addService);
+		
+		int num1 = 20;
+		int num2 = 30;
+		int expected = 50;
+		
+		when(addService.add(num1, num2)).thenReturn(expected);
+		int actual = calcService.myCalc(num1, num2);
+		assertEquals(expected, actual);
+		
+		
+	}
+
+}

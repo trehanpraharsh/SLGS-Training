@@ -1,0 +1,25 @@
+package com.client;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.entity.Employee;
+import com.sf.FactoryProvider;
+
+public class Client {
+	
+	public static void main(String[] args) {
+		
+		Session session = FactoryProvider.getSession();
+		
+		Transaction transaction = session.beginTransaction();
+		
+		Employee employee = new Employee(101, "Praharsh", "Gujarat");
+		session.save(employee);
+		transaction.commit();
+		System.out.println("Employee added...!");
+
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.model;
+
+public class WelcomeDAOImpl implements WelcomeDAO {
+	
+
+	@Override
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return "Hello " + name;
+	}
+
+	
+}

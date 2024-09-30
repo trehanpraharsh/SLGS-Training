@@ -1,0 +1,21 @@
+package com.config;
+
+import org.springframework.context.annotation.Configuration;
+
+import com.model.WelcomeDAOImpl;
+import com.service.WelcomeService;
+
+@Configuration
+
+public class AppConfig {
+	
+	public WelcomeDAOImpl wcdi() {
+		return new WelcomeDAOImpl();
+	}
+	
+	public WelcomeService wls() {
+		return new WelcomeService(wcdi());
+	}
+	
+
+}

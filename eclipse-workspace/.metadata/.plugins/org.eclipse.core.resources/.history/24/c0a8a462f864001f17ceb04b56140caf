@@ -1,0 +1,16 @@
+package com.service;
+
+import com.model.InterestCalculator;
+
+public class CalculateService {
+	
+	private InterestCalculator ic;
+	
+	public double calculateROI(double amount) {
+		
+		return ic.calculate(amount);
+		
+	}
+	
+
+}

@@ -1,0 +1,24 @@
+package com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.model.WelcomeDAO;
+
+import lombok.AllArgsConstructor;
+
+@Service
+
+public class WelcomeService {
+	
+	@Autowired
+	@Qualifier("welcome")
+	private WelcomeDAO wcd;
+	
+	public String welcome(String name) {
+		return wcd.sayHello(name);
+	}
+	
+
+}

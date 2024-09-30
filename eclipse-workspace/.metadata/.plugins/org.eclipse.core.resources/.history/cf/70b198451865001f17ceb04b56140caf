@@ -1,0 +1,26 @@
+package com.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class SavingAccount implements InterestCalculator {
+
+	private double roi;
+	private int duration;
+	
+//	public SavingAccount() {
+//		System.out.println("Inside SavingsAccount...");
+//	}
+	
+	@Override
+	public double calculate(double amount) {
+		// TODO Auto-generated method stub
+		return amount*roi/duration;
+		
+	}
+
+}

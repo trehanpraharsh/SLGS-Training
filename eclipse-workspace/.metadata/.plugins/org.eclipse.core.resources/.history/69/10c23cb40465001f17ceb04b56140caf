@@ -1,0 +1,19 @@
+package com.service;
+
+import com.model.InterestCalculator;
+
+import lombok.Data;
+
+@Data
+public class CalculateService {
+	
+	private InterestCalculator ic;
+	
+	public double calculateROI(double amount) {
+		
+		return ic.calculate(amount);
+		
+	}
+	
+
+}

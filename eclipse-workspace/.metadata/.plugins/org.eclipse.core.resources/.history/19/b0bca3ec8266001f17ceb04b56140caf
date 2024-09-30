@@ -1,0 +1,15 @@
+package com.service;
+
+import java.util.List;
+
+import com.model.Employee;
+
+public interface EmployeeService {
+	
+	public void saveEmployeetoDB(Employee employee);
+	
+	public List<Employee> printEmployeetoDB();
+	
+	public Employee getEmpByIDtoDB();
+
+}

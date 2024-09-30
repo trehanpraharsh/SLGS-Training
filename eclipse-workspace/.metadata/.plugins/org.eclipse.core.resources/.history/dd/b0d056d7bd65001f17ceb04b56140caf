@@ -1,0 +1,38 @@
+package com.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.model.FixedAccount;
+import com.model.LoanAccount;
+import com.model.SalaryAccount;
+import com.model.SavingAccount;
+import com.service.CalculateService;
+
+@Configuration
+
+public class AppConfig {
+	
+	public SavingAccount sa() {
+		return new SavingAccount(5.5, 4);
+	}
+	
+	public FixedAccount fda() {
+		return new FixedAccount(4.5, 7);
+	}
+	
+	public LoanAccount la() {
+		return new LoanAccount(7.1, 4);
+	}
+	
+	public SalaryAccount sla() {
+		return new SalaryAccount(8.5, 4);
+	}
+	
+	
+	public CalculateService service() {
+		return new CalculateService(fda());
+	}
+	
+
+}

@@ -1,0 +1,22 @@
+package com.dao;
+
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import org.springframework.stereotype.Repository;
+
+import com.model.Insurance;
+
+@Repository
+public class InsuranceDAOImpl extends JdbcDaoSupport implements InsuranceDAO{
+
+	@Override
+	public void addInsurance(Insurance insurance) {
+		// TODO Auto-generated method stub
+		String insertCode = "insert into insurance values(?,?,?)";
+		getJdbcTemplate().update(insertCode, new Object[] {
+			insurance.getEmpID(), insurance.getScheme(), insurance.getAmount()	
+		});
+		
+	}
+	
+
+}

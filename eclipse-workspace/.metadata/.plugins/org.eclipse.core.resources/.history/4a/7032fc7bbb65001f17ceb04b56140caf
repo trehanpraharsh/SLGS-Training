@@ -1,0 +1,21 @@
+package com.model;
+
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
+@Component(value="itl")
+@Lazy
+public class ItalianRestro implements Restaurant {
+	
+	public ItalianRestro() {
+		System.out.println("Inside Italian Restro");
+	}
+
+	@Override
+	public void prepareDish(String dish) {
+		// TODO Auto-generated method stub
+		System.out.println("Preparing " + dish + " with herbs and olive oil");
+		
+	}
+
+}

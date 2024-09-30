@@ -1,0 +1,21 @@
+package com.client;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.config.AppConfig;
+import com.service.ServiceDesk;
+
+public class Guest {
+	
+	public static void main(String[] args) {
+		
+		ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		ServiceDesk sd = (ServiceDesk) ctx.getBean("service");
+		
+		sd.makeDish("Paneer Pizza");
+		
+		
+	}
+
+}

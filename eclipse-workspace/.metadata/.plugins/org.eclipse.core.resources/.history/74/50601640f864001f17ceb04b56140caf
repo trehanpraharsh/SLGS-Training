@@ -1,0 +1,15 @@
+package com.model;
+
+public class SavingAccount implements InterestCalculator {
+
+	private double roi;
+	private int duration;
+	
+	@Override
+	public double calculate(double amount) {
+		// TODO Auto-generated method stub
+		return amount*roi/duration;
+		
+	}
+
+}

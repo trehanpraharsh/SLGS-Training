@@ -1,0 +1,19 @@
+package com.model;
+
+import org.springframework.stereotype.Component;
+
+@Component(value="ind")
+public class IndianRestro implements Restaurant {
+	
+	public IndianRestro() {
+		System.out.println("Inside Indian Restro...");
+	}
+
+	@Override
+	public void prepareDish(String dish) {
+		// TODO Auto-generated method stub
+		System.out.println("Preparing " + dish + " with spices and love");
+		
+	}
+
+}

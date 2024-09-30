@@ -1,0 +1,35 @@
+package com.service;
+
+import org.springframework.stereotype.Service;
+
+import com.model.InterestCalculator;
+
+import lombok.Data;
+
+@Data
+@Service
+
+public class CalculateService {
+	
+	private InterestCalculator ic;
+	
+	public CalculateService() {
+		System.out.println("Inside Calculate Service...");
+	}
+	
+	public double calculateROI(double amount) {
+		
+		return ic.calculate(amount);
+		
+	}
+	
+	public void init() {
+		System.out.println("After initialization");
+	}
+	
+	public void destroy() {
+		System.out.println("Before Destruction");
+	}
+	
+
+}

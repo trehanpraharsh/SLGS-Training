@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Administrator\Downloads\spring-mockito"/>
+			<item value="C:\Users\Administrator\Desktop\Shopping-Cart-App\spring-security"/>
+			<item value="C:\Users\Administrator\Desktop\Shopping-Cart-App\api-gateway"/>
+			<item value="C:\Users\Administrator\Desktop\Shopping-Cart-App\config-server-app"/>
+			<item value="C:\Users\Administrator\Desktop\Shopping-Cart-App"/>
+			<item value="C:\Users\Administrator\Downloads\student-service-registry"/>
+			<item value="C:\Users\Administrator\Downloads\student-service-ms"/>
+			<item value="C:\Users\Administrator\Downloads\client-service"/>
+			<item value="C:\Users\Administrator\Downloads\student-service"/>
+			<item value="C:\Users\Administrator\Downloads\spring-rest"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

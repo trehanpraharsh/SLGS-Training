@@ -1,0 +1,12 @@
+package com.advice;
+
+import org.aspectj.lang.annotation.Before;
+
+public class LoggerApp2 {
+	
+	@Before("execution (* com.model.WelcomeDAOImpl.sayHello(..))")
+	public void callBefore2() {
+		System.out.println("Called before jointpoint again...");
+	}
+
+}

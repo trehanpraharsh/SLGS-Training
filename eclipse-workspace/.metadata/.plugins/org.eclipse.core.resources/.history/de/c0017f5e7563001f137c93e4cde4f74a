@@ -1,0 +1,20 @@
+package shopcart;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+
+@RunWith(Parameterized.class)
+public class ParameterTestDemo {
+	
+	@Parameter(0)
+	public int income;
+	@Parameter(1)
+	public int LWP;
+	@Parameter(2)
+	public int HRA;
+	
+	
+	
+
+}

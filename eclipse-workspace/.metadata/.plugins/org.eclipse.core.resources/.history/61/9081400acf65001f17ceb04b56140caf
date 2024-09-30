@@ -1,0 +1,17 @@
+package com.service;
+
+import com.model.WelcomeDAO;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class WelcomeService {
+	
+	private WelcomeDAO wcd;
+	
+	public String welcome(String name) {
+		return wcd.sayHello(name);
+	}
+	
+
+}

@@ -1,0 +1,20 @@
+package com.service;
+
+import org.springframework.stereotype.Service;
+
+import com.model.WelcomeDAO;
+
+import lombok.AllArgsConstructor;
+
+@Service
+
+public class WelcomeService {
+	
+	private WelcomeDAO wcd;
+	
+	public String welcome(String name) {
+		return wcd.sayHello(name);
+	}
+	
+
+}

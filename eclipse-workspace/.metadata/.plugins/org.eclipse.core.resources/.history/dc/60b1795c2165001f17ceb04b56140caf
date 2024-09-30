@@ -1,0 +1,14 @@
+package com.service;
+
+import com.model.Restaurant;
+
+public class ServiceDesk {
+	
+	private Restaurant rest;
+	
+	public void makeDish(String dishName) {
+		System.out.println(rest.prepareDish(dishName));
+		
+	}
+
+}

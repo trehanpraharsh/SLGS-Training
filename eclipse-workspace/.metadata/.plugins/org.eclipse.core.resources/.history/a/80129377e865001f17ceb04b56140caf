@@ -1,0 +1,37 @@
+package com.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import org.springframework.stereotype.Repository;
+
+import com.model.Employee;
+
+import jakarta.annotation.PostConstruct;
+
+
+@Repository
+public class EmployeeDAOImpl extends JdbcDaoSupport implements EmployeeDAO {
+
+	@Autowired
+	//DataSource is used to 
+	private DataSource dataSource;
+	
+	@PostConstruct
+	private void init() {
+		setDataSource(dataSource);
+	}
+	
+	@Override
+	public void saveEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		String insertCode = "insert into employee values(?,?,?)";
+		//the update function uses PreparatoryStatement by default
+		getJdbcTemplate().update(insertCode, new Object[] {employee.getEmpID(), employee.getEmpName(), employee.getEmpLocation()});
+		
+	}
+	
+	
+
+}
